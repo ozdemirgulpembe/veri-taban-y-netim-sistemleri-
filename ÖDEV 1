@@ -1,4 +1,5 @@
 1.SORU --> Geleneksel dosyalama sistemlerinin çalışma şeklini açıklayarak bildiğiniz bir programlama dili yardımıyla txt dosyadan veri okumak ve veri yazmak için bir uygulama geliştiriniz. 
+Geleneksel dosyalama sistemlerinde , depolanacak veri grupları bağımsız olarak oluşturulmak zorundadır. Bu tür dosyalarda veri , sıralı veya doğrudan erişim yöntemi ile kullanılır.
 Belgeler  belirli bir düzene göre (örneğin, alfabetik, kronolojik, konu bazlı) düzenlenir. 
 
 2.SORU --> Geleneksel dosyalama sistemleriyle veri tabanı yönetim sistemlerinin benzerlik ve farklılıklarını açıklayınız.
@@ -10,8 +11,7 @@ Belgeler  belirli bir düzene göre (örneğin, alfabetik, kronolojik, konu bazl
  *Küçük ölçekli veri yönetimi için kullanılabilirler.               
  *Her ikisi de sistem performansına etki eder.                  
 
- 
-=FARKLILIK
+  =FARKLILIK
  *Dosyalama sistemleri bağımsız dosyalar kullanırken, VTYS verileri tablolar ve ilişkilerle saklar.
  *Dosyalama sistemlerinde veri tekrarları sık görülür, VTYS veri tekrarını önler.
  *VTYS, gelişmiş yetkilendirme ve şifreleme sunarken, dosyalama sistemleri temel dosya izinleriyle korunur.
@@ -81,6 +81,26 @@ tablodaki birincil anahtara bağlanarak tablolar arasındaki ilişkiyi sağlar.
            ÖR:Bir öğrencinin birden fazla dersi alabilmesi ve bir dersin birden fazla öğrenciye açık olması
 
 11.SORU --> Bir öğrenci bilgi sistemi için kullanılacak veritabanı,tablolar ve tablolar arasındaki ilişkileri belirleyiniz.
-          
+      TABLOLAR 
+      Öğrenciler  ( ÖğrenciID , Ad , soyad , kayıt tarihi , telefon , email )
+      Öğretmenler ( ÖğretmenID , Ad , soyad , telefon , email )
+      Dersler     ( Ders adı , ders kodu , kredi )
+      Kayıtlar    ( ÖğrenciID , kayıt tarihi , ders )
+      Notlar      ( Not , öğrenciID , ders )
+      Bölümler    ( Bölüm adı )
+
+      TABLOLAR ARASI İLİŞKİLER 
+      Öğrenciler <=> Kayıtlar arası  1-N ilişksi 
+       ( Bir öğrenci birden fazla derse kayıt olabilir.)
+      Dersler <=> Kayıtlar arası 1-N ilişkisi 
+       ( Bir derse birden fazla öğrenci kayıt olabilir.)
+      Dersler  <=> Öğretmenler arası 1-N ilişkisi 
+       ( Bir öğretmen birden fazla derse girebilir.)
+      Öğrenci <=> Notlar arası 1-N ilişkisi 
+       ( Bir öğrencinin birden fazla notu olabilir.)
+      Dersler <=> Notlar arası 1-N ilişkisi 
+       ( Bir dersin birden fazla notu olabilir.)
+      Öğretmenler <=> Bölümler arası N-1 ilişkisi 
+       ( Bir bölümde birden fazla öğretmen olabilir.)
    
 
