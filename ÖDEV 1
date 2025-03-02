@@ -2,13 +2,13 @@
 Belgeler  belirli bir düzene göre (örneğin, alfabetik, kronolojik, konu bazlı) düzenlenir. 
 
 2.SORU --> Geleneksel dosyalama sistemleriyle veri tabanı yönetim sistemlerinin benzerlik ve farklılıklarını açıklayınız.
- =BENZERLİK                                                            |             =FARKLILIK 
- *Veri saklama amacı taşırlar.                                         |     *Dosyalama sistemleri bağımsız dosyalar kullanırken, VTYS verileri tablolar ve ilişkilerle saklar.
- *Verilere erişim, güncelleme ve silme işlemleri yapılabilir.          |     *Dosyalama sistemlerinde veri tekrarları sık görülür, VTYS veri tekrarını önler.
- *Güvenlik önlemleri bulunur.                                          |     *VTYS, gelişmiş yetkilendirme ve şifreleme sunarken, dosyalama sistemleri temel dosya izinleriyle korunur.
- *Yedekleme ve kurtarma işlemleri mümkündür.                           |     *VTYS otomatik yedekleme desteklerken, dosyalama sistemlerinde bu işlemler genellikle manuel yapılır.
- *Küçük ölçekli veri yönetimi için kullanılabilirler.                  |     *VTYS çok kullanıcılı erişimi ve eşzamanlı işlemleri destekler, dosyalama sistemleri bu konuda sınırlıdır.
- *Her ikisi de sistem performansına etki eder.                         |     *VTYS büyük veri yönetimi ve ölçeklenebilirlik için uygundur, dosyalama sistemleri büyük veriyle çalışmakta zorlanır.
+ =BENZERLİK                                                     |             =FARKLILIK 
+ *Veri saklama amacı taşırlar.                                  |     *Dosyalama sistemleri bağımsız dosyalar kullanırken, VTYS verileri tablolar ve ilişkilerle saklar.
+ *Verilere erişim, güncelleme ve silme işlemleri yapılabilir.   |     *Dosyalama sistemlerinde veri tekrarları sık görülür, VTYS veri tekrarını önler.
+ *Güvenlik önlemleri bulunur.                                   |     *VTYS, gelişmiş yetkilendirme ve şifreleme sunarken, dosyalama sistemleri temel dosya izinleriyle korunur.
+ *Yedekleme ve kurtarma işlemleri mümkündür.                    |     *VTYS otomatik yedekleme desteklerken, dosyalama sistemlerinde bu işlemler genellikle manuel yapılır.
+ *Küçük ölçekli veri yönetimi için kullanılabilirler.           |     *VTYS çok kullanıcılı erişimi ve eşzamanlı işlemleri destekler, dosyalama sistemleri bu konuda sınırlıdır.
+ *Her ikisi de sistem performansına etki eder.                  |     *VTYS büyük veri yönetimi ve ölçeklenebilirlik için uygundur, dosyalama sistemleri büyük veriyle çalışmakta zorlanır.
                                                                       
 Yani sonuç olarak geleneksel dosyalama sistemleri, küçük ölçekli veri saklama için uygundur ancak veri tutarlılığı, güvenlik ve çok kullanıcılı erişim açısından sınırlıdır.
 Veritabanı yönetim sistemleri, büyük ve karmaşık veri kümeleriyle çalışmak için daha verimli olup veri bütünlüğü, güvenlik ve erişim kontrolü açısından avantajlıdır.
