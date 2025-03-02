@@ -1,0 +1,77 @@
+1.SORU --> Geleneksel dosyalama sistemlerinin çalışma şeklini açıklayarak bildiğiniz bir programlama dili yardımıyla txt dosyadan veri okumak ve veri yazmak için bir uygulama geliştiriniz. 
+Belgeler  belirli bir düzene göre (örneğin, alfabetik, kronolojik, konu bazlı) düzenlenir. 
+
+2.SORU --> Geleneksel dosyalama sistemleriyle veri tabanı yönetim sistemlerinin benzerlik ve farklılıklarını açıklayınız.
+ =BENZERLİK                                                           |             =FARKLILIK 
+ *Veri saklama amacı taşırlar.                                        |     *Dosyalama sistemleri bağımsız dosyalar kullanırken, VTYS verileri tablolar ve ilişkilerle saklar.
+ *Verilere erişim, güncelleme ve silme işlemleri yapılabilir.         |     *Dosyalama sistemlerinde veri tekrarları sık görülür, VTYS veri tekrarını önler.
+ *Güvenlik önlemleri bulunur.                                         |     *VTYS, gelişmiş yetkilendirme ve şifreleme sunarken, dosyalama sistemleri temel dosya izinleriyle korunur.
+ *Yedekleme ve kurtarma işlemleri mümkündür.                          |     *VTYS otomatik yedekleme desteklerken, dosyalama sistemlerinde bu işlemler genellikle manuel yapılır.
+ *Küçük ölçekli veri yönetimi için kullanılabilirler.                 |     *VTYS çok kullanıcılı erişimi ve eşzamanlı işlemleri destekler, dosyalama sistemleri bu konuda sınırlıdır.
+ *Her ikisi de sistem performansına etki eder.                        |     *VTYS büyük veri yönetimi ve ölçeklenebilirlik için uygundur, dosyalama sistemleri büyük veriyle çalışmakta zorlanır.
+                                                                      
+Yani sonuç olarak geleneksel dosyalama sistemleri, küçük ölçekli veri saklama için uygundur ancak veri tutarlılığı, güvenlik ve çok kullanıcılı erişim açısından sınırlıdır.
+Veritabanı yönetim sistemleri, büyük ve karmaşık veri kümeleriyle çalışmak için daha verimli olup veri bütünlüğü, güvenlik ve erişim kontrolü açısından avantajlıdır.
+
+3.SORU --> VTYS'nin geleneksel sisteme göre üstün özelliklerini açıklayınız.
+*Çoklu kullanıcı desteği , birden fazla kullanıcı aynı anda üzerinde çalışabilir 
+*Kullanıcılara farklı yetkiler verilebilir.Bu sayede verilerin güvenliğide sağlanmış olur.
+*Verilerin kalıcılığını sağlar. İstediğiniz bilgileri , istediğiniz türde , istediğiniz sürece saklanmasını sağlamaktadır.
+*Veri tekrarını önler ve ilişkisel yapıyı korur. 
+*Hızlı erişim sağlar 
+
+4.SORU --> Veritabanının görevini açıklayarak kullanıldığı alanlara örnek veriniz.
+Veri tabanları veri saklama , yönetme güvenlik sağlama ve hızlı erişim için kullanılır 
+       kullanım alanları 
+       -Bankacılık 
+       -Sağlık 
+       -E-Ticaret 
+       -Eğitim 
+       -Sosyal medya ve iletişim sistemleri 
+       -Oyun veritabanları 
+       -E ticaret ve online alışveriş 
+
+5.SORU --> Tablo , satır ve sütun kavramlarını açıklayınız 
+TABLO: Veritabanı içerisinde tutulacak verileri taşımak için kullanılır . Tablo satır ve sütunlardan oluşan verilerin depolandığı veritabanı elemanıdır.
+SÜTUN: Tablo içerisinde tutulan her bir veri türüne verilen isimdir .
+SATIR: Tablo içerisinde sütuna ait veri grubudur.
+
+6.SORU --> Birincil anahtar ve yabancıl anahtar kavramlarını ve farklarını açıklayınız.
+Primary Key ( Birincil Anahtar )
+-> Tabloda tutulan verilerden benzersiz yani aynı değeri iki kez içermeyecek olan sütun birincil anahtar olarak belirlenir.
+
+Foreign Key (Yabancıl Anahtar )
+-> Bir tablodaki sütunun başka bir tablodaki birincil anahtara referans vermesidir. İki tablo arasında ilişki kurar.
+
+==>Birincil anahtar , bir tablodaki her kaydı benzersiz şekilde tanımlayan alanken ; yabancı anahtar , başka bir 
+tablodaki birincil anahtara bağlanarak tablolar arasındaki ilişkiyi sağlar.
+
+
+7.SORU --> Veritabanı kullanıcı türleri nelerdir?
+          *Veritabanı yöneticisi
+          *Uygulama programcısı 
+          *Sorgu dili kullanıcıları 
+          *Son kullanıcılar 
+
+
+8.SORU --> Örnek bir veri tabanı için kullanıcılar belirleyerek yetkilendirmelerini şematik olarak gösteriniz.
+
+9.SORU --> Veritabanı ile VTYS'nin farkını açıklayınız.
+  Veritabanı verilerin saklandığı yerdir.
+  Veritabanı yönetim sistemi verileri yönetmek için kullanılan yazılımdır.
+
+10.SORU --> İlişkisel veri modelini açıklayınız.
+   İlişkisel veri modeli , verileri tablolar halinde organize eden sistemdir 
+   İlişkiler Bire-Bir (1-1) , Bire-Çok ( 1-n) , Çoğa-Bir (n-1) , ve Çoğa-Çok (n-m) 
+
+    BİRE-BİR (1-1) ilişkileri => Bir tablodaki bir kayıt , diğer tabloda yalnızca bir kayıtla eşleşir.
+           ÖR:Bir çalışanın sadece bir kimlik kartı vardır.
+    BİRE-ÇOK (1-n) ilişkileri => Bir tablodaki bir kayıt , diğer tabloda birden fazla kayıtla eşleşebiliri
+           ÖR:Bir öğrencinin birden fazla ders alabilmesi
+    ÇOĞA-ÇOK (n-m) ilişkileri => İki tablo arasında çoklu ilişkilerin olduğu durumlardır.
+           ÖR:Bir öğrencinin birden fazla dersi alabilmesi ve bir dersin birden fazla öğrenciye açık olması
+
+11.SORU --> Bir öğrenci bilgi sistemi için kullanılacak veritabanı,tablolar ve tablolar arasındaki ilişkileri belirleyiniz.
+          
+   
+
