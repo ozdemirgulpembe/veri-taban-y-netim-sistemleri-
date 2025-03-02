@@ -10,7 +10,8 @@ Belgeler  belirli bir düzene göre (örneğin, alfabetik, kronolojik, konu bazl
  *Küçük ölçekli veri yönetimi için kullanılabilirler.               
  *Her ikisi de sistem performansına etki eder.                  
 
-  =FARKLILIK
+ 
+=FARKLILIK
  *Dosyalama sistemleri bağımsız dosyalar kullanırken, VTYS verileri tablolar ve ilişkilerle saklar.
  *Dosyalama sistemlerinde veri tekrarları sık görülür, VTYS veri tekrarını önler.
  *VTYS, gelişmiş yetkilendirme ve şifreleme sunarken, dosyalama sistemleri temel dosya izinleriyle korunur.
