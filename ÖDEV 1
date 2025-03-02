@@ -2,15 +2,15 @@
 Geleneksel dosyalama sistemlerinde , depolanacak veri grupları bağımsız olarak oluşturulmak zorundadır. Bu tür dosyalarda veri , sıralı veya doğrudan erişim yöntemi ile kullanılır.
 Belgeler  belirli bir düzene göre (örneğin, alfabetik, kronolojik, konu bazlı) düzenlenir. 
 
-
-|  HASTA ID      |    HASTA ADI   |    TC KİMLİK NO   |
-|________________|________________|___________________|                
-       
-   
-
-
-
-
+_______________________________________________________________________________________________________________________________
+|   HASTA ID      |    HASTA ADI     |    TC KİMLİK NO   |      BÖLÜM      |    SON MUAYENE TARİHİ    |      DOKTOR ADI       |
+|_________________|__________________|___________________|_________________|__________________________|_______________________|    
+|     1001        |   AYŞE KORKMAZ   |    15549668107    |   KARDİYOLOJİ   |        15.02.2024        |    DR. AHMET YILMAZ 
+|_________________|__________________|___________________|_________________|__________________________|________________________  
+|
+|
+|
+|
 
 
 
