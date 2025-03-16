@@ -65,7 +65,7 @@ create table yazarlar (
 
 create table kutuphane_kitaplar (
     KutuphaneNo int not null,
-    ISBN nvarchar(20) not null,
+    ISBN int not null,
     Miktar int,
     Primary Key (KutuphaneNo, ISBN),
     Foreign Key (KutuphaneNo) REFERENCES Kutuphane(KutuphaneNo),
@@ -83,8 +83,8 @@ create table kitaplar_yazarlar (
 
 
 Create table kitaplar_kategoriler (
-    ISBN nvarchar(20),
-    KategoriNo int,
+    ISBN int not null,
+    KategoriNo int not null,
     Primary Key (ISBN, KategoriNo),
     Foreign Key (ISBN) REFERENCES Kitaplar(ISBN),
     Foreign Key (KategoriNo) REFERENCES Kategoriler(KategoriNo)
