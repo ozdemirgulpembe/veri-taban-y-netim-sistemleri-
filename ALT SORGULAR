@@ -107,6 +107,30 @@ SELECT
  left join satislar on araclar.AracNo = satislar.AracNo
  where satislar.AracNo is null
 
+!-- 7.	Her aracın ortalama satış tutarını bulmak için gerekli SQL ifadesini yazınız.
+
+  SELECT araclar.marka, araclar.model, AVG(satislar.Fiyat) AS OrtalamaFiyat
+  FROM araclar
+  JOIN satislar  ON araclar.Aracno = satislar.Aracno
+  GROUP BY araclar.marka, araclar.model
+  ORDER BY OrtalamaFiyat DESC;
+
+!-- 8. Alımı ve satışı yapılan tüm araçların marka, model ve alım-satış sayısını listelemek için gerekli SQL ifadesiniz yazınız.
+   
+   SELECT  araclar.marka, araclar.model,
+    COUNT(DISTINCT alislar.alisNo) AS AlimSayisi,
+    COUNT(DISTINCT satislar.satisno) AS SatisSayisi
+   FROM araclar
+   LEFT JOIN alislar ON araclar.Aracno = alislar.Aracno
+   LEFT JOIN satislar ON araclar.Aracno = satislar.Aracno
+   GROUP BY araclar.marka, araclar.model;
+
+
+
+
+
+
+
 
 
 
