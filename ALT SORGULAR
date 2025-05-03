@@ -71,9 +71,45 @@ insert into alislar values(2,1,4,'2023','8820003');
 insert into alislar values(4,1,1,'2021','88200034');
 
 !-- 1.Satış yapılan müşterilerin isimlerini listelemek için gerekli SQL ifadesini yazınız.
+
 select Madi, Msoyadi
 from satislar M
 join musteri s on M.MNo=s.Mno
 
 !-- 2.Hangi müşteriden hangi aracın alındığını listelemek için gerekli SQL ifadesini yazınız.
+
+select (musteri.Madi+ ' ' + musteri.Msoyadi) as musteri, araclar.model
+from alislar
+inner join musteri on musteri.Mno = alislar.MNo
+inner join araclar on araclar.Aracno = alislar.AracNo
+
+!-- 3.	Her bir müşteriden alınan araçların sayısını listelemek için gerekli SQL ifadesini yazınız.
+select count(a.MNo) from alislar as a
+inner join musteri as m on m.Mno = a.MNo
+
+!-- 4.Satılan araçların marka ve modelini bulmak için gerekli SQL ifadesini yazınız.
+
+select araclar.marka, araclar.model
+from satislar
+join araclar on  araclar.Aracno=satislar.AracNo
+
+!-- 5.Toplam satış ve toplam alım tutarlarını ve bunların farkını bulmak için gerekli SQL ifadesini yazınız.
+
+SELECT 
+  (SELECT SUM(satislar.Fiyat) FROM satislar) AS Toplam_Satis,
+  (SELECT SUM(alislar.Fiyat) FROM alislar) AS Toplam_Alim,
+  (SELECT SUM(satislar.Fiyat) FROM satislar) - (SELECT SUM(alislar.Fiyat) FROM alislar) AS Fark;
+
+!-- 6.	Hiç satışı yapılmamış araçları listelemek için gerekli SQL ifadesini yazınız.
+
+ select araclar.marka, araclar.model
+ from araclar
+ left join satislar on araclar.AracNo = satislar.AracNo
+ where satislar.AracNo is null
+
+
+
+
+
+
 
