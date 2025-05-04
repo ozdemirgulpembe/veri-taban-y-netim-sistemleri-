@@ -117,9 +117,7 @@ SELECT
 
 !-- 8. Alımı ve satışı yapılan tüm araçların marka, model ve alım-satış sayısını listelemek için gerekli SQL ifadesiniz yazınız.
    
-   SELECT  araclar.marka, araclar.model,
-    COUNT(DISTINCT alislar.alisNo) AS AlimSayisi,
-    COUNT(DISTINCT satislar.satisno) AS SatisSayisi
+   SELECT  araclar.marka, araclar.model,COUNT(DISTINCT alislar.alisNo) AS AlimSayisi,COUNT(DISTINCT satislar.satisno) AS SatisSayisi
    FROM araclar
    LEFT JOIN alislar ON araclar.Aracno = alislar.Aracno
    LEFT JOIN satislar ON araclar.Aracno = satislar.Aracno
@@ -128,12 +126,7 @@ SELECT
 
 !--9. 20000’den fazla tutara satılan araçları kimlerin hangi aracı aldığını bulmak için gerekli SQL ifadesini yazınız.
 
-   SELECT 
-    musteri.Madi, 
-    musteri.Msoyadi, 
-    araclar.marka, 
-    araclar.model, 
-    satislar.Fiyat
+   SELECT musteri.Madi, musteri.Msoyadi, araclar.marka, araclar.model, satislar.Fiyat
    FROM satislar
    JOIN Musteri ON satislar.Mno = musteri.Mno
    JOIN araclar ON satislar.Aracno =araclar.Aracno
@@ -141,14 +134,8 @@ SELECT
 
 !--10. Tokatta bulunan müşterilere satışı yapılan araçları listelemek için gerekli SQL ifadesini yazınız.
 
-   SELECT 
-    musteri.Madi, 
-    musteri.Msoyadi, 
-    musteri.Madres,
-    araclar.marka, 
-    araclar.model, 
-    satislar.Fiyat
+   SELECT  musteri.Madi, musteri.Msoyadi, musteri.Madres, araclar.marka, araclar.model, satislar.Fiyat
    FROM satislar
    JOIN Musteri ON satislar.Mno = musteri.Mno
    JOIN araclar ON satislar.Aracno = araclar.Aracno
-    WHERE musteri.Madres = 'Tokat';
+   WHERE musteri.Madres = 'Tokat';
