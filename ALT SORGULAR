@@ -126,14 +126,29 @@ SELECT
    GROUP BY araclar.marka, araclar.model;
 
 
+!--9. 20000’den fazla tutara satılan araçları kimlerin hangi aracı aldığını bulmak için gerekli SQL ifadesini yazınız.
 
+   SELECT 
+    musteri.Madi, 
+    musteri.Msoyadi, 
+    araclar.marka, 
+    araclar.model, 
+    satislar.Fiyat
+   FROM satislar
+   JOIN Musteri ON satislar.Mno = musteri.Mno
+   JOIN araclar ON satislar.Aracno =araclar.Aracno
+   WHERE satislar.Fiyat > 20000;
 
+!--10. Tokatta bulunan müşterilere satışı yapılan araçları listelemek için gerekli SQL ifadesini yazınız.
 
-
-
-
-
-
-
-
-
+   SELECT 
+    musteri.Madi, 
+    musteri.Msoyadi, 
+    musteri.Madres,
+    araclar.marka, 
+    araclar.model, 
+    satislar.Fiyat
+   FROM satislar
+   JOIN Musteri ON satislar.Mno = musteri.Mno
+   JOIN araclar ON satislar.Aracno = araclar.Aracno
+    WHERE musteri.Madres = 'Tokat';
